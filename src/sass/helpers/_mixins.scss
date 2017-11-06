@@ -49,3 +49,11 @@
 @mixin blur($var) {
   filter: blur($var);
 }
+
+// vertical-align at center
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
