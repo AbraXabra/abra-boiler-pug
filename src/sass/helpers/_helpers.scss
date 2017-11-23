@@ -1,142 +1,161 @@
 // container
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
 }
 
 @media (min-width:576px) {
-  .container {
-      max-width: 540px
-  }
+    .container {
+        max-width: 540px
+    }
 }
 
 @media (min-width:768px) {
-  .container {
-      max-width: 720px
-  }
+    .container {
+        max-width: 720px
+    }
 }
 
 @media (min-width:992px) {
-  .container {
-      max-width: 960px
-  }
+    .container {
+        max-width: 960px
+    }
 }
 
 @media (min-width:1200px) {
-  .container {
-      max-width: 1300px
-  }
+    .container {
+        max-width: 1300px
+    }
 }
-//=======================//
 
+//=======================//
 // vue v-cloak
 [v-cloak] {
-  display: none;
+    display: none;
 }
+
 //=======================//
-
 // h1-h6
-h1,h2,h3,h4,h5,h6 {
-  margin-bottom: .5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-}
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.75rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
-  font-size: 1.25rem;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-  font-size: 1rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
 
 // button
 .btn {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  text-decoration: none;
-  &:active {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
-  }
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
-  }
-  &:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-    transition: 0.5s
-  }
-}
-
-
-// menu
-.menu {			
-  display: flex;
-  li {
-    position: relative;
-    margin-right: 20px;
-    &:last-child {
-      margin-right: 0;
-    }
-    a {
-      display: block;
-      color: #000;
-      text-decoration: none;
-    }
-  }
-}
-
-.submenu {
-  position: absolute;
-  li {
-    position: relative;
     display: inline-block;
-    overflow: hidden;	
-    opacity: 0;
-    visibility: hidden;	
-    width: 100%;
-    transition: .5s;
-    a {
-      display: block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    text-decoration: none;
+    &:active {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #005cbf;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
     }
-  }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
+    }
+    &:hover {
+        color: #fff;
+        background-color: #0069d9;
+        border-color: #0062cc;
+        transition: 0.5s
+    }
 }
 
-.menu > li:hover .submenu,
-.menu > li:hover .submenu li {
-  opacity: 1;
-  visibility: visible;
-}	
+//Navigation menu
+.nav-item {
+    padding: 1em;
+    display: inline;
+}
+
+//Dropdown menu
+.nav-item-dropdown {
+    position: relative;
+    &:hover>.dropdown-menu {
+        animation: menu 0.7s ease-in-out;
+        display: block;
+        opacity: 1;
+    }
+}
+
+.dropdown-menu {
+    background-color: #ED3E44;
+    display: block;
+    text-align: right;
+    position: absolute;
+    top: 2.5rem;
+    right: -10px;
+    display: none;
+    opacity: 0;
+    width: 260px;
+    a {
+        color: #fff;
+    }
+}
+
+.dropdown-menu-item {
+    cursor: pointer;
+    padding: 1em;
+    text-align: center;
+    &:hover {
+        background-color: darken(#ED3E44, 5%);
+    }
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

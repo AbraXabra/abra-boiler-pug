@@ -13,19 +13,22 @@ block content
         a(href="#" class="btn") кнопка
 
         //- menu
-        ul.menu
-            li
-                a(href="#") Menu item
-            li
-                a(href="#") Menu item
-                ul.submenu
-                    li
-                        a(href="#") Menu item
-                    li
-                        a(href="#") Menu item
-                    li
-                        a(href="#") Menu item
-            li
-                a(href="#") Menu item
-            li
-                a(href="#") Menu item
+        ul.nav-items
+                li.nav-item
+                    a(href="#") меню 1
+                li.nav-item
+                    a(href="#") меню 2
+                //- Dropdown menu
+                li.nav-item.nav-item-dropdown
+                    a(class="dropdown-trigger" href="#") меню дроп
+                        ul.dropdown-menu
+                            li.dropdown-menu-item
+                                a(href="#") меню 1
+                            li.dropdown-menu-item
+                                a(href="#") меню 2
+                            li.dropdown-menu-item
+                                a(href="#") меню 3
+                li.nav-item
+                    a(href="#") меню 3
+                li.nav-item
+                    a(href="#") меню 4
